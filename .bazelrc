@@ -2,7 +2,7 @@ startup --host_jvm_args=--add-opens=java.base/java.lang=ALL-UNNAMED
 
 build --experimental_convenience_symlinks=ignore
 
-build:android --define 'exos_target=android' --extra_toolchains=@androidndk//:all --crosstool_top=@androidndk//:default_crosstool --host_crosstool_top=@bazel_tools//tools/cpp:toolchain --per_file_copt=".*\\.cpp,.*\\.cc@-std=c++17"
+build:android --extra_toolchains=@androidndk//:all --crosstool_top=@androidndk//:default_crosstool --host_crosstool_top=@bazel_tools//tools/cpp:toolchain --per_file_copt=".*\\.cpp,.*\\.cc@-std=c++17"
 
 build:aarch64-release --config=android -c opt --cpu=arm64-v8a --fat_apk_cpu=arm64-v8a --cxxopt=-DNDEBUG
 
