@@ -1,0 +1,7 @@
+
+cc_library(
+	name = "test",
+	srcs = ["test.cpp"],
+	visibility = ["//visibility:public"],
+	linkstatic = True,
+)
